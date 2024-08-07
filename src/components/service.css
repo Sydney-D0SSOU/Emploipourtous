@@ -1,0 +1,10 @@
+.container {
+  margin-top: 8rem;
+  margin-bottom: 4rem;
+}
+
+.image-overlay {
+ 
+  height: 10vh;
+  background-color: rgba(114, 218, 255);
+}

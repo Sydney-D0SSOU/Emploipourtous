@@ -1,0 +1,37 @@
+
+.Admindashboad {
+  margin-top: 3rem;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+.Ent {
+  font-size: 3rem;
+  color: black;
+}
+
+.Admin_title {
+  font-size: 4rem;
+  text-align: center;
+  color: black;
+}
+
+.travail_section {
+  justify-content:center;
+}
+
+th, td {
+  border: 2px solid black;
+}
+
+th {
+  background-color: #1d2634;
+  font-weight: bold;
+}
+tr:nth-child(even) {
+  background-color: #1d2634;
+  color: #fff;
+}
+
+.error-message {
+  color: red;
+}

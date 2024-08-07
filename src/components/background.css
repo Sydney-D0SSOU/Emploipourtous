@@ -1,0 +1,38 @@
+@font-face {
+  font-family: Caudex-Regular;
+  src: url('../fonts/Caudex-Regular.ttf') format('ttf');
+   font-family: Avenir Light;
+  src: url('../fonts/Avenir Light.ttf');
+}
+
+.hero-section {
+  margin-top: 4rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  padding: 120px 0px;
+}
+
+.hero-title {
+  font-family: 'Caudex-Regular', sans-sereif;
+  color: #ffffff;
+  font-size: 72px;
+  font-weight: bold;
+}
+
+
+.hero-text {
+  font-family: 'Avenir Light', sans-sereif;
+  color: #133A52;
+  font-size: 27px;
+  margin-top: 20px;
+}
+
+.hero-text1 {
+  font-family: 'Avenir Light', sans-sereif;
+  color: #133A52;
+  font-size: 27px;
+  display: flex;
+  justify-content: center;
+  margin-right: 350px;
+}

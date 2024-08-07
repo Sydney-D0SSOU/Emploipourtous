@@ -1,0 +1,11 @@
+.article-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.line {
+   margin-top: 2rem;
+   border-bottom: 1px solid grey;
+}

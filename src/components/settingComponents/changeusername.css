@@ -1,0 +1,32 @@
+.changeUsernameform{
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.changeUsernameform label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.changeUsernameform input {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.changeUsernameform button {
+  padding: 10px ;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.changeUsernameform button:hover {
+  background-color: #0062cc;
+}

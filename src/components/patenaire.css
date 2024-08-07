@@ -1,0 +1,29 @@
+.partenaires-container {
+  background-color: rgb(11, 41, 59);
+  margin-bottom: 10px;
+}
+
+.partenaires-title {
+  font-family: Oswald Medium;
+  font-size: 40px;
+  color: white;
+  margin-right: -1px;
+}
+
+.partenaires-logo {
+  background-image: url('logo.jpg');
+  background-size: cover;
+  background-position: center right;
+  height: 15vh;
+  width: 15vw;
+  animation: moveImage 20s linear infinite; 
+}
+
+@keyframes moveImage {
+  0% {
+    margin-left: 1vw; 
+  }
+  100% {
+    margin-left: 100%; 
+  }
+}

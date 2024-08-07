@@ -1,0 +1,73 @@
+/*.settingsbody {
+   background-color: #1d2634;
+}
+.settings-card {
+  color: #fff;
+  background-color: #1d2634;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.settings-option {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.settings-icon {
+  font-size: 24px;
+  margin-right: 10px;
+}
+
+.newuserform {
+   margin-bottom : 10px;
+}
+
+@media (max-width: 576px) {
+  /* Responsive styling for small screens 
+  .settings-option {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .settings-icon {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+}*/
+
+/* Settings.css */
+/* Settings.css */
+.settings-container {
+   margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.setting-item {
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 80%;
+  max-width: 400px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.setting-item h3 {
+  margin: 0 0 10px;
+}
+
+.setting-item h3 {
+  display: flex;
+  align-items: center;
+  margin: 0 0 10px;
+}
+
+.setting-item .icon-lock {
+  margin-right: 10px;
+}
