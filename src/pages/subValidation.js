@@ -139,7 +139,7 @@ export default function SubValidation() {
       return;
     }*/ 
     
-    axios.get('http://localhost:5000/api/validatedusers2') 
+    axios.get('https://emploibackend.onrender.com/api/validatedusers2') 
       .then((response) => {
         setUserData(response.data);
         setLoadingUsers(false);

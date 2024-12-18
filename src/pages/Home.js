@@ -45,7 +45,7 @@ export default function Home() {
       return;
     }
 
-    axios.get('http://localhost:5000/api/agence-users')
+    axios.get('https://emploibackend.onrender.com/api/agence-users')
       .then((response) => {
         setAgenceUsers(response.data);
         console.log(response.data);

@@ -36,7 +36,7 @@ function DeleteAgenceOffre() {
     }
     
     const adminLocality = localStorage.getItem('localite');
-		axios.get(`http://localhost:5000/api/users-by-locality/${adminLocality}`)
+		axios.get(`https://emploibackend.onrender.com/api/users-by-locality/${adminLocality}`)
 		  .then((response) => {
 			setUsersInSameLocality(response.data);
 		  })
@@ -75,7 +75,7 @@ function DeleteAgenceOffre() {
 		   }
 	  const confirmationMessage = ` wants to delete "${selectedUser.entreprise}", needs confirmation.`;
 	  axios
-		.post('http://localhost:5000/api/recruiterdeleterequest', {
+		.post('https://emploibackend.onrender.com/api/recruiterdeleterequest', {
 		  loggedInUserId: localStorage.getItem('id'),
 		  selectedUserId: selectedUser.id,
 		  message: confirmationMessage,

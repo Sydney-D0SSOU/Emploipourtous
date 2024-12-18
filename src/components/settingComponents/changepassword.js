@@ -26,7 +26,7 @@ function ChangePassword() {
   };
 
   const handleYes = () => {
-    axios.post('http://localhost:5000/api/hokage/change-password', { oldPassword, newPassword, username })
+    axios.post('https://emploibackend.onrender.com/api/hokage/change-password', { oldPassword, newPassword, username })
       .then((response) => {
         console.log(response.data);
         if (response.status === 200) {

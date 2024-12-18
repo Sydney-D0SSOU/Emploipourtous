@@ -10,7 +10,7 @@ export function Explodeslice() {
 
     async function fetchData() {
       try {
-        const response = await axios.get(`http://localhost:5000/api/admin-graph-data/${adminLocality}`);
+        const response = await axios.get(`https://emploibackend.onrender.com/api/admin-graph-data/${adminLocality}`);
         setLocalityCounts(response.data.data);
         console.log(localityCounts.workers);
       } catch (error) {

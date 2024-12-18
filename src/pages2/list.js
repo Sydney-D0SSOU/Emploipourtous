@@ -19,7 +19,7 @@ export default function AgenceList() {
     }*/
 
     /*axios
-      .get('http://localhost:5000/api/all_recruter_users', {
+      .get('https://emploibackend.onrender.com/api/all_recruter_users', {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -31,7 +31,7 @@ export default function AgenceList() {
         console.error('Error fetching users data:', error);
       });*/
        const adminLocality = localStorage.getItem('localite');
-		axios.get(`http://localhost:5000/api/users-by-locality/${adminLocality}`)
+		axios.get(`https://emploibackend.onrender.com/api/users-by-locality/${adminLocality}`)
 		  .then((response) => {
 			setRecruterData(response.data);
 		  })
@@ -39,7 +39,7 @@ export default function AgenceList() {
 			console.error('Error fetching users by locality:', error);
 		  });
     axios
-      .get('http://localhost:5000/api/all_users', {})
+      .get('https://emploibackend.onrender.com/api/all_users', {})
       .then((response) => {
         setContactData(response.data);
       })
@@ -47,7 +47,7 @@ export default function AgenceList() {
         console.error('Error fetching users data:', error);
       });
       
-      axios.get(`http://localhost:5000/api/usersdemande-by-locality/${adminLocality}`)
+      axios.get(`https://emploibackend.onrender.com/api/usersdemande-by-locality/${adminLocality}`)
 		  .then((response) => {
 			 setTravaillerData(response.data);
 		  })
@@ -55,7 +55,7 @@ export default function AgenceList() {
 			console.error('Error fetching users by locality:', error);
 		  });
     /*axios
-      .get('http://localhost:5000/api/all_job_users', {})
+      .get('https://emploibackend.onrender.com/api/all_job_users', {})
       .then((response) => {
         setTravaillerData(response.data);
       })

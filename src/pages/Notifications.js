@@ -33,7 +33,7 @@ function NotificationComponent() {
       return;
     }*/
 
-    axios.get('http://localhost:5000/api/deleterequests')
+    axios.get('https://emploibackend.onrender.com/api/deleterequests')
       .then((response) => {
         setDeleteRequests(response.data);
         console.log(response.data);
@@ -48,7 +48,7 @@ function NotificationComponent() {
   const handleCardClick = (request) => {
     setSelectedRequest(request);
     setShowAcceptDeclineDialog(true);
-    axios.post('http://localhost:5000/api/changeStatus', { id_delete: request.id_delete, status: true})
+    axios.post('https://emploibackend.onrender.com/api/changeStatus', { id_delete: request.id_delete, status: true})
 		  .then((response) => {
 			  console.log('Satus changed:', response.data);
 		  })
@@ -74,7 +74,7 @@ function NotificationComponent() {
 
  const handleDeleteClick = (event, id) => {
     event.stopPropagation(); 
-    axios.delete(`http://localhost:5000/api/delete-notification2/${id}`)
+    axios.delete(`https://emploibackend.onrender.com/api/delete-notification2/${id}`)
       .then((response) => {
         console.log('Notification deleted:', response.data);
         setDeleteRequests(deleteRequests.filter(request => request.id !== id));
@@ -85,7 +85,7 @@ function NotificationComponent() {
   };
   
   const handleAccept = () => {
-    axios.post('http://localhost:5000/api/accept-request', {
+    axios.post('https://emploibackend.onrender.com/api/accept-request', {
       id_delete: selectedRequest.id_delete,
       message: `Your request to delete Company "${selectedRequest.delete_name}", has been accepted.`,
     })
@@ -101,7 +101,7 @@ function NotificationComponent() {
   };
 
   const handleDecline = () => {
-    axios.post('http://localhost:5000/api/decline-request', {
+    axios.post('https://emploibackend.onrender.com/api/decline-request', {
       id_delete: selectedRequest.id_delete,
       message: `Your request to delete Company "${selectedRequest.delete_name}", has been declined.`,
     })

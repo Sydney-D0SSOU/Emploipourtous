@@ -22,7 +22,7 @@ export default function AccordionDash() {
   const adminLocality = localStorage.getItem('localite');
 
   useEffect(() => {
-    axios.get(`http://localhost:5000/api/agence/usersdemande/${adminLocality}`, {})
+    axios.get(`https://emploibackend.onrender.com/api/agence/usersdemande/${adminLocality}`, {})
       .then(response => {
         setData(response.data);
       })
@@ -30,7 +30,7 @@ export default function AccordionDash() {
         console.error('Error fetching data:', error);
       });
       
-       axios.get(`http://localhost:5000/api/agence/usersoffre/${adminLocality}`)
+       axios.get(`https://emploibackend.onrender.com/api/agence/usersoffre/${adminLocality}`)
       .then(response => {
         setRecruite(response.data);
       })

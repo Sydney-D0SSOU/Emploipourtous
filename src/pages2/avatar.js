@@ -64,7 +64,7 @@ export default function BackgroundLetterAvatars() {
     }
    const adminLocality = localStorage.getItem('localite');
     axios
-      .get(`http://localhost:5000/api/tabledata/${adminLocality}`, {})
+      .get(`https://emploibackend.onrender.com/api/tabledata/${adminLocality}`, {})
       .then((response) => {
         setTableData1(response.data);
       })

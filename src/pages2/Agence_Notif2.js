@@ -9,7 +9,7 @@ function AgenceNotification2() {
   
 
   useEffect(() => {
-    axios.get(`http://localhost:5000/api/notifications2/${userId}`)
+    axios.get(`https://emploibackend.onrender.com/api/notifications2/${userId}`)
       .then((response) => {
         setNotifMessage(response.data);
         console.log(notifMessage);

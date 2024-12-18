@@ -29,7 +29,7 @@ function CotonouLocalities() {
     async function fetchData() {
       try {
         const response = await axios.get(
-          'http://localhost:5000/api/admin-graph-data'
+          'https://emploibackend.onrender.com/api/admin-graph-data'
         );
         setGraphData(response.data);
       } catch (error) {

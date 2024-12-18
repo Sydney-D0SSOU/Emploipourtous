@@ -6,7 +6,7 @@ export function PieChart() {
   const [localityCounts, setLocalityCounts] = useState({});
 
   useEffect(() => {
-    axios.get("http://localhost:5000/api/count-users")
+    axios.get("https://emploibackend.onrender.com/api/count-users")
       .then((response) => {
         setLocalityCounts(response.data);
       })

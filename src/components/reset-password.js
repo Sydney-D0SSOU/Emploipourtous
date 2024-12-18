@@ -80,7 +80,7 @@ const PasswordReset = () => {
     setPasswordsMatch(password === confirmPassword);
 
     if (passwordsMatch) {
-      axios.post('http://localhost:5000/reset-password', {
+      axios.post('https://emploibackend.onrender.com/reset-password', {
         email: email,
         password: password,
       })

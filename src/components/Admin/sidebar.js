@@ -86,7 +86,7 @@ export default function Sidebar() {
   const [messageCount, setMessageCount] = useState(0);
 
   useEffect(() => {
-    axios.get('http://localhost:5000/api/notif-message-count')
+    axios.get('https://emploibackend.onrender.com/api/notif-message-count')
       .then((response) => {
         setMessageCount(response.data.totalCount);
         console.log(response.data.totalCount);

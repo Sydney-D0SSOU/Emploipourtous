@@ -85,7 +85,7 @@ export default function SidebarAgence() {
   const activeRoute = location.pathname;
 
   useEffect(() => {
-    axios.get(`http://localhost:5000/api/notif-message-count-agence/${userId}`)
+    axios.get(`https://emploibackend.onrender.com/api/notif-message-count-agence/${userId}`)
       .then((response) => {
         setMessageCount(response.data.totalCount);
       })

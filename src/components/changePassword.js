@@ -16,7 +16,7 @@ function PasswordChangeForm() {
 
   const handleChangePassword = async () => {
     try {
-      const response = await axios.post('http://localhost:5000/api/password', {
+      const response = await axios.post('https://emploibackend.onrender.com/api/password', {
         currentPassword,
         newPassword,
         confirmPassword,

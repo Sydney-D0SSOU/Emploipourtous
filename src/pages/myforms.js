@@ -46,7 +46,7 @@ setFormData({ ...formData, [name]: value, type:value });
  
 const handleSubmit = () => {
     if (isFormValid()) {
-      axios.post('http://localhost:5000/api/formdata', formData)
+      axios.post('https://emploibackend.onrender.com/api/formdata', formData)
         .then((response) => {
           console.log('Request successful:', response.data);
         })
@@ -268,7 +268,7 @@ export default function InputAdornments() {
       }
 
       axios
-        .post('http://localhost:5000/api/formdata', formData)
+        .post('https://emploibackend.onrender.com/api/formdata', formData)
         .then((response) => {
           console.log('Request successful:', response.data);
           console.log(formData);

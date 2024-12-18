@@ -37,7 +37,7 @@ export default function List() {
     }*/
 
     axios
-      .get('http://localhost:5000/api/all_recruter_users', {
+      .get('https://emploibackend.onrender.com/api/all_recruter_users', {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -49,7 +49,7 @@ export default function List() {
         console.error('Error fetching users data:', error);
       });
     axios
-      .get('http://localhost:5000/api/all_users', {})
+      .get('https://emploibackend.onrender.com/api/all_users', {})
       .then((response) => {
         setContactData(response.data);
       })
@@ -57,7 +57,7 @@ export default function List() {
         console.error('Error fetching users data:', error);
       });
     axios
-      .get('http://localhost:5000/api/all_job_users', {})
+      .get('https://emploibackend.onrender.com/api/all_job_users', {})
       .then((response) => {
         setTravaillerData(response.data);
       })

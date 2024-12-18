@@ -13,7 +13,7 @@ function ChangeEmail() {
   const handleSubmit = (event) => {
     event.preventDefault();
      try {
-     const response = axios.post('http://localhost:5000/api/change-Email', { oldEmail, newEmail })
+     const response = axios.post('https://emploibackend.onrender.com/api/change-Email', { oldEmail, newEmail })
       .then((response) => {
         console.log(response.data);
       })
@@ -82,7 +82,7 @@ function ChangeEmail() {
 
   const handleYes = () => {
     axios
-      .post('http://localhost:5000/api/change-Email', { oldEmail, newEmail })
+      .post('https://emploibackend.onrender.com/api/change-Email', { oldEmail, newEmail })
       .then((response) => {
         console.log(response.data);
         if (response.status === 200) {

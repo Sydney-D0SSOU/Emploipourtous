@@ -21,7 +21,7 @@ export default function AccordionDash() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    axios.get('http://localhost:5000/api/getjob_applications', {})
+    axios.get('https://emploibackend.onrender.com/api/getjob_applications', {})
       .then(response => {
         setData(response.data);
       })
@@ -29,7 +29,7 @@ export default function AccordionDash() {
         console.error('Error fetching data:', error);
       });
       
-       axios.get('http://localhost:5000/api/getrecruiting_applications', {})
+       axios.get('https://emploibackend.onrender.com/api/getrecruiting_applications', {})
       .then(response => {
         setRecruite(response.data);
       })

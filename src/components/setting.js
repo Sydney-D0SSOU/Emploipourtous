@@ -25,7 +25,7 @@ function Settings() {
     e.preventDefault();
 
     try {
-      const response = await axios.post('http://localhost:5000/api/update_settings', {
+      const response = await axios.post('https://emploibackend.onrender.com/api/update_settings', {
         username,
         newPassword,
         newEmail,

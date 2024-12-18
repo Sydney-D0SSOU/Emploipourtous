@@ -27,7 +27,7 @@ function AgenceStatistics() {
     async function fetchData() {
       try {
         const response = await axios.get(
-          `http://localhost:5000/api/admin-graph-data/${adminLocality}`
+          `https://emploibackend.onrender.com/api/admin-graph-data/${adminLocality}`
         ,{});
         setGraphData(response.data);
       } catch (error) {

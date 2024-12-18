@@ -26,7 +26,7 @@ const TravaillerSP = () => {
 
   const checkEmailExists = async (email) => {
     try {
-      const response = await axios.post('http://localhost:5000/api/check-email', { email });
+      const response = await axios.post('https://emploibackend.onrender.com/api/check-email', { email });
       return response.data.emailExists;
     } catch (error) {
       console.error('Error checking email:', error);
@@ -61,7 +61,7 @@ const TravaillerSP = () => {
         localite,
       };
       axios
-        .post('http://localhost:5000/api/submit', formData)
+        .post('https://emploibackend.onrender.com/api/submit', formData)
         .then((response) => {
           if (response.status === 200) {
             console.log('success');

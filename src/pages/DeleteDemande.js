@@ -32,7 +32,7 @@ function DeleteDemande() {
     }
 
     axios
-      .get('http://localhost:5000/api/demande-users')
+      .get('https://emploibackend.onrender.com/api/demande-users')
       .then((response) => {
         setAgenceUsers(response.data);
       })
@@ -63,7 +63,7 @@ function DeleteDemande() {
 
   const handleDeleteUser = () => {
     axios
-      .delete(`http://localhost:5000/api/deletedemande-users/${selectedUser.id}`)
+      .delete(`https://emploibackend.onrender.com/api/deletedemande-users/${selectedUser.id}`)
       .then(() => {
         setAgenceUsers((users) => users.filter((user) => user.id !== selectedUser.id));
 

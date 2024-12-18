@@ -64,7 +64,7 @@ export default function BackgroundLetterAvatars() {
     }*/
 
     axios
-      .get('http://localhost:5000/api/tabledata', {})
+      .get('https://emploibackend.onrender.com/api/tabledata', {})
       .then((response) => {
         setTableData1(response.data);
         console.log(response.data); 

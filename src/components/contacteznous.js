@@ -24,7 +24,7 @@ const ContactezNous = () => {
 
   /*const checkEmailExistence = async (email) => {
     try {
-      const response = await axios.post('http://localhost:5000/api/check-emailsubmit-form', { email });
+      const response = await axios.post('https://emploibackend.onrender.com/api/check-emailsubmit-form', { email });
       return response.data.exists;
     } catch (error) {
       console.error('Error checking email existence:', error);
@@ -58,13 +58,13 @@ const ContactezNous = () => {
     const formData = { email, noms, adresse, telephone, objet, message };
 
     try {
-      const response = await axios.post('http://localhost:5000/api/check-emailsubmit-form', { email });
+      const response = await axios.post('https://emploibackend.onrender.com/api/check-emailsubmit-form', { email });
 
       if (response.data.exists) {
         setErrors({ ...newErrors, email: true });
         setFocusedField('email');
       } else {
-        const submitResponse = await axios.post('http://localhost:5000/api/submit-form', formData);
+        const submitResponse = await axios.post('https://emploibackend.onrender.com/api/submit-form', formData);
         console.log('Success:', submitResponse.data);
         setSuccessMessage('Form successfully registered');
         setIsModalOpen(true);
@@ -116,7 +116,7 @@ const ContactezNous = () => {
       const formData = { email, noms, adresse, telephone, objet, message };
 
       try {
-        const response = await axios.post('http://localhost:5000/api/submit-form', formData);
+        const response = await axios.post('https://emploibackend.onrender.com/api/submit-form', formData);
         console.log('Success:', response.data);
         setSuccessMessage('Form successfully registered');
         setIsModalOpen(true);

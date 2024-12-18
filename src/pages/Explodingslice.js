@@ -6,7 +6,7 @@ export function Explodeslice() {
   const [localityCounts, setLocalityCounts] = useState({});
 
   useEffect(() => {
-    axios.get("http://localhost:5000/api/counts-users")
+    axios.get("https://emploibackend.onrender.com/api/counts-users")
       .then((response) => {
         setLocalityCounts(response.data);
       })

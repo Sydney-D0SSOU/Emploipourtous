@@ -14,7 +14,7 @@ function NotificationComponent2() {
   const [loading, setLoading] = useState(true);
   useEffect(() => {
     
-    axios.get('http://localhost:5000/api/deleterequestsoffre')
+    axios.get('https://emploibackend.onrender.com/api/deleterequestsoffre')
       .then((response) => {
         setDelete2Requests(response.data);
         setLoading(false);
@@ -29,7 +29,7 @@ function NotificationComponent2() {
     setSelectedRequest(request);
     setShowAcceptDeclineDialog(true);
     
-    axios.post('http://localhost:5000/api/changeStatus2', { id_delete: request.id_delete, status: true})
+    axios.post('https://emploibackend.onrender.com/api/changeStatus2', { id_delete: request.id_delete, status: true})
 		  .then((response) => {
 			  console.log('Satus changed:', response.data);
 		  })
@@ -40,7 +40,7 @@ function NotificationComponent2() {
   
   const handleDeleteClick = (event, id) => {
     event.stopPropagation(); 
-    axios.delete(`http://localhost:5000/api/delete-notification/${id}`)
+    axios.delete(`https://emploibackend.onrender.com/api/delete-notification/${id}`)
       .then((response) => {
         console.log('Notification deleted:', response.data);
         setDelete2Requests(delete2Requests.filter(request => request.id !== id));
@@ -56,7 +56,7 @@ function NotificationComponent2() {
   };
 
 const handleAccept = () => {
-     axios.post('http://localhost:5000/api/accept-request2', {
+     axios.post('https://emploibackend.onrender.com/api/accept-request2', {
       id_delete:  selectedRequest.id_delete,
       message:` Your request  to delete User "${selectedRequest.delete_name}", has been accepted .`
     })
@@ -72,7 +72,7 @@ const handleAccept = () => {
   };
 
   const handleDecline = () => {
-    axios.post('http://localhost:5000/api/decline-request2', {
+    axios.post('https://emploibackend.onrender.com/api/decline-request2', {
       id_delete:  selectedRequest.id_delete,
       message:` Your request  to delete User "${selectedRequest.delete_name}", has been declined .`
     })

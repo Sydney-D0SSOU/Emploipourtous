@@ -31,7 +31,7 @@ export default function About() {
 
     try {
       const userData = { username, password, role, zone, email };
-      const response = await axios.post('http://localhost:5000/api/add_admin', userData);
+      const response = await axios.post('https://emploibackend.onrender.com/api/add_admin', userData);
       if (response.status === 200) {
         console.log('User signed up successfully');
       }

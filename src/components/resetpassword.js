@@ -48,7 +48,7 @@ const ResetPasswordPage = () => {
   e.preventDefault();
 
   try {
-    const response = await axios.post('http://localhost:5000/api/checkUser', {
+    const response = await axios.post('https://emploibackend.onrender.com/api/checkUser', {
       email: email,
     });
 

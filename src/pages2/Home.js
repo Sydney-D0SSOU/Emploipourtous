@@ -30,7 +30,7 @@ export default function HomeAgence() {
       return;
     }
     
-      axios.get(`http://localhost:5000/api/agence/usersoffre/${adminLocality}`)
+      axios.get(`https://emploibackend.onrender.com/api/agence/usersoffre/${adminLocality}`)
       .then(response => {
        setRecruite(response.data);
       })

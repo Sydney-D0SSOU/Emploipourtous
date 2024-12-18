@@ -23,7 +23,7 @@ const Services = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post('http://localhost:5000/api/send_request', {
+      const response = await axios.post('https://emploibackend.onrender.com/api/send_request', {
         firstName,
         lastName,
         email,

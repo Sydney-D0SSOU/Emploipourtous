@@ -26,7 +26,7 @@ function DeleteDemande() {
     }
 
       const adminLocality = localStorage.getItem('localite');
-		axios.get(`http://localhost:5000/api/usersdemande-by-locality/${adminLocality}`)
+		axios.get(`https://emploibackend.onrender.com/api/usersdemande-by-locality/${adminLocality}`)
 		  .then((response) => {
 			setUsersInSameLocality(response.data);
 		  })
@@ -64,7 +64,7 @@ function DeleteDemande() {
 		   }
 	  const confirmationMessage = ` wants to delete "${selectedUser.nom}", needs confirmation.`;
 	  axios
-		.post('http://localhost:5000/api/demandedeleterequest', {
+		.post('https://emploibackend.onrender.com/api/demandedeleterequest', {
 		  loggedInUserId: localStorage.getItem('id'),
 		  selectedUserId: selectedUser.id,
 		  message: confirmationMessage,

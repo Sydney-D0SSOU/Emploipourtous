@@ -136,7 +136,7 @@ export default function Validation() {
       return;
     }*/
 
-    axios.get('http://localhost:5000/api/validatedusers')
+    axios.get('https://emploibackend.onrender.com/api/validatedusers')
       .then((response) => {
         setUserData(response.data);
         setLoadingUsers(false);

@@ -17,7 +17,7 @@ function DisplayZone() {
       navigate('/Login');
       return;
     }
-       axios.get(`http://localhost:5000/api/agence/usersdemande/${adminLocality}`, {})
+       axios.get(`https://emploibackend.onrender.com/api/agence/usersdemande/${adminLocality}`, {})
       .then(response => {
          setAgenceUsers(response.data);
       })
@@ -25,7 +25,7 @@ function DisplayZone() {
         console.error('Error fetching data:', error);
       });
       
-       axios.get(`http://localhost:5000/api/agence/usersoffre/${adminLocality}`)
+       axios.get(`https://emploibackend.onrender.com/api/agence/usersoffre/${adminLocality}`)
       .then(response => {
         setRecruite(response.data);
       })

@@ -21,7 +21,7 @@ function AgenceValidation() {
       navigate('/Login');
       return;
     }
-       axios.get(`http://localhost:5000/api/agence/usersdemandevali/${adminLocality}`, {})
+       axios.get(`https://emploibackend.onrender.com/api/agence/usersdemandevali/${adminLocality}`, {})
       .then(response => {
          setAgenceUsers(response.data);
          console.log(response.data);
@@ -44,7 +44,7 @@ function AgenceValidation() {
   
   const handleValidateUser = () => {
      axios
-      .post(`http://localhost:5000/api/validatedemande-users/${selectedUser.id}`)
+      .post(`https://emploibackend.onrender.com/api/validatedemande-users/${selectedUser.id}`)
       .then(() => {
         handleValideClose();
       })

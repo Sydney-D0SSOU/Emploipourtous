@@ -16,7 +16,7 @@ function RecruteurSP() {
     e.preventDefault();
     const formData = { entreprise, contact_telephonique, email, sujet, detail_requete };
     axios
-      .post('http://localhost:5000/api/recruteur', formData)
+      .post('https://emploibackend.onrender.com/api/recruteur', formData)
       .then((response) => {
         console.log('Success:', response.data);
       })
