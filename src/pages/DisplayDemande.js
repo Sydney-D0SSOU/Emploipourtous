@@ -37,11 +37,11 @@ function DisplayDemande() {
   const navigate = useNavigate();
   const token = localStorage.getItem('token');
 
-  useEffect(() => {
+  /*useEffect(() => {
     if (!token) {
       navigate('/Login');
       return;
-    }
+    }*/
 
     api.get('/candidat/list')
       .then((response) => {
