@@ -36,13 +36,11 @@ function DisplayDemande() {
   const itemsPerPage = 15; // Nombre de lignes par page
   const navigate = useNavigate();
   const token = localStorage.getItem('token');
+  
+  // Récupérer la localité de l'agence à partir du localStorage
+  const agenceLocality = localStorage.getItem('localisation'); 
 
-  /*useEffect(() => {
-    if (!token) {
-      navigate('/Login');
-      return;
-    }*/
-
+  useEffect(() => {
     api.get('/candidat/list')
       .then((response) => {
         setCandidatUsers(response.data.sort((a, b) => b.idCand - a.idCand)); // Trier par ordre décroissant
@@ -50,7 +48,7 @@ function DisplayDemande() {
       .catch((error) => {
         console.error('Error fetching candidat users:', error);
       });
-  /*}, [navigate, token]);*/
+  }, []);
 
   const handleDetailsOpen = (user) => {
     setSelectedUser(user);
@@ -99,11 +97,12 @@ function DisplayDemande() {
     }
   };
 
-  const filteredUsers = candidatUsers.filter((user) =>
-    user.nom.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    user.email.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    user.locality.toLowerCase().includes(searchTerm.toLowerCase())
-  );
+  // Filtrer les utilisateurs dont la localité correspond à agenceLocality
+  const filteredUsers = agenceLocality
+  ? candidatUsers.filter((user) =>
+      user.locality.toLowerCase() === agenceLocality.toLowerCase()
+    )
+  : candidatUsers;
 
   const indexOfLastUser = currentPage * itemsPerPage;
   const indexOfFirstUser = indexOfLastUser - itemsPerPage;

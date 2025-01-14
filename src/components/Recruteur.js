@@ -26,10 +26,11 @@ function Recruteur() {
 
     try {
       const formData = { name, contact, email, sujet, localisation, Detail };
+      console.log('formData:', formData);
       const response = await api.post('/recruteur/create', formData);
 
       console.log('Success:', response.data);
-      setSuccessMessage('Form successfully registered');
+      setSuccessMessage('Entreprise  : ' + name + ' a été enregistrée avec succès. Nous vous contacterons bientôt.');
       setSignupError("");
       setIsModalOpen(true);
       setName('');

@@ -5,6 +5,7 @@ import Recruteur from './components/Recruteur';
 import Travailler from './components/Travailler';
 import Services from './components/service';
 import Login from './components/Login';
+import AgLogin from './components/loginAgence';
 import AdminDashboard from './components/AdminDashboard';
 import PasswordChangeForm from './components/changePassword';
 import ResetPasswordPage from './components/resetpassword';
@@ -55,6 +56,8 @@ function App() {
           <Route path="/travailler" element={<Travailler />} />
           <Route path="/services" element={<Services />} />
           <Route path="/Login" element={<Login />} />
+          <Route path="/AgenceLogin" element={<AgLogin />} />
+
           <Route path="/AdminAccueil" element={<Home />} />
           <Route path="/agence" element={<HomeAgence />} />
           <Route path="/AdminDashboard" element={<AdminDashboard />} /> 

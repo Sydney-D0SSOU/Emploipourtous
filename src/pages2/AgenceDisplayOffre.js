@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Card, CardContent, Grid, Typography, Button, Dialog, DialogContent, IconButton } from '@mui/material';
 import { Box } from '@mui/material';
-import Sidebar from '../components/Agence/sidebar';
+import Sidebar from "../components/Admin/sidebar";
 import Navbar from '../components/Agence/Navbar';
 import CloseIcon from '@mui/icons-material/Close';
 import { useNavigate } from 'react-router-dom';
