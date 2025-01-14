@@ -48,7 +48,7 @@ function DisplayDemande() {
       .catch((error) => {
         console.error('Error fetching candidat users:', error);
       });
-  }, []);
+  }, [navigate, token]);
 
   const handleDetailsOpen = (user) => {
     setSelectedUser(user);
